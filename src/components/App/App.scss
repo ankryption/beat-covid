@@ -1,17 +1,6 @@
-@import "~antd/dist/antd.css";
+@import '~antd/dist/antd.css';
 
-.menu-item {
-  line-height: 64px;
-}
-
-.volcano {
-  color: #fa541c;
-}
-
-.ant-layout {
+.ant-layout-content {
   height: 100vh;
-}
-
-.ant-layout-sider {
-  padding-top: 60px;
+  padding: 32px !important;
 }

@@ -1,9 +1,8 @@
-import React from "react";
-// import { Input, Button, Spin, Empty, message } from "antd";
-import { withRouter, RouteComponentProps } from "react-router-dom";
+import React from 'react';
+import { Col, Input, Card, Skeleton } from 'antd';
+import { withRouter, RouteComponentProps } from 'react-router-dom';
 
-interface IState {
-}
+interface IState {}
 
 class Home extends React.Component<RouteComponentProps, IState> {
   constructor(props: RouteComponentProps) {
@@ -13,7 +12,16 @@ class Home extends React.Component<RouteComponentProps, IState> {
 
   render() {
     return (
-          <p>Home</p>
+      <>
+        <Col span={12}>
+          <Input placeholder="search your location"></Input>
+        </Col>
+        {[1, 2, 3, 4].map(() => (
+          <Card style={{ margin: '16px 0' }}>
+            <Skeleton avatar active />
+          </Card>
+        ))}
+      </>
     );
   }
 }
