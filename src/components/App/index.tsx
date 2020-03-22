@@ -19,16 +19,10 @@ export default class App extends React.Component<RouteComponentProps, IState> {
   }
 
   render() {
-    // const {
-    //     history: {
-    //       location: { pathname },
-    //     },
-    //   } = this.props;
-
     return (
       <div className="App">
         <Layout className="layout">
-          <Header>
+          <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
             <div className="logo" />
             <Menu
               theme="dark"
@@ -43,7 +37,7 @@ export default class App extends React.Component<RouteComponentProps, IState> {
               <Menu.Item key="4">Feedback</Menu.Item>
             </Menu>
           </Header>
-          <Content style={{ padding: '0 50px' }}>
+          <Content style={{ marginTop: '64px' }}>
             <Switch>
               <Route exact path="/" component={Home} />
               <Route path="/report*" component={Report} />

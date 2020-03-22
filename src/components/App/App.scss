@@ -1,6 +1,14 @@
 @import '~antd/dist/antd.css';
 
 .ant-layout-content {
-  height: 100vh;
-  padding: 32px !important;
+  height: calc(100vh - 64px);
+  padding: 32px;
+}
+
+.logo {
+  width: 120px;
+  height: 31px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px 24px 16px 0;
+  float: left;
 }
